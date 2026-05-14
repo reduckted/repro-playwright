@@ -1,0 +1,24 @@
+name: Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+
+      - name: playwright
+        env:
+          DEBUG_FILE: "playwright-debug.log"
+        run: |
+          npm ci
+          npm run init
+
+      - name: Print Log
+        run: cat "playwright-debug.log"
