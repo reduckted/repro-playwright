@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
 
-      - name: Run a multi-line script
+      - name: playwright 
         run: |
-          npm ci
+          npm i
           npm run init
