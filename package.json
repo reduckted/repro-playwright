@@ -1,10 +1,10 @@
 {
-  "name": "test",
-  "private": true,
-  "depeneencies": {
-    "playwright": "latest"
-  },
-  "scripts": {
-    "init": "playwright install chromium firefox"
-  }
+    "name": "test",
+    "private": true,
+    "dependencies": {
+        "playwright": "1.60.0"
+    },
+    "scripts": {
+        "init": "playwright install chromium firefox"
+    }
 }
